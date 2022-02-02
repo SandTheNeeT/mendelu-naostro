@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MENDELU</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href={{url_for('static', filename='style.css')}}>
+    </head>
+    <body>
+        <nav>
+            <div id="menu">
+                <a href="{{url_for('index')}}">Home</a>
+                <a href="{{url_for('kecatko')}}">Chat</a>
+                <a href="#">Předměty</a>
+                <a href="#">Login</a>
+            </div>
+        </nav>
+
+        <div id="banner-container">
+            <img src="https://akela.mendelu.cz/~xvalovic/cichnovka_roman/images/pef.png" alt="logo mendelu">
+            <div class="banner-title">Mendelu</div>
+            <div class="banner-bottom">Nejlepší informatika v Blackfield!</div>
+        </div>
+
+        {% block main %}
+        {% endblock %}
+
+        <footer>
+            <div>
+                <h3>Adresa</h3>
+                <address>
+                    PEF MENDELU<br>
+                    Zemědělská 1<br>
+                    Brno 613 00
+                </address>
+            </div>
+            <div>
+                <h3>Kontakt</h3>
+                +420 737 420 069<br>
+                info@mendelu.cz
+            </div>
+        </footer>
+    </body>
+</html>

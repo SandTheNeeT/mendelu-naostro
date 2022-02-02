@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<main>
+    <section>
+        <h1>Chatroom</h1>
+
+        <ul>
+            {% for m in zpravy %}
+                <li>{{m.user}}: {{m.message}} </li>
+            {% endfor %}
+        </ul>
+
+        <h4>Nová zpráva</h4>
+        <form method="POST">
+            <input type="text" name="user" name="msg" required placeholder="jméno"><br>
+            <textarea name="message" required placeholder="zpráva"></textarea>
+            <input type="submit" value="Odeslat">
+        </form>
+    </section>
+</main>
+{% endblock %}
